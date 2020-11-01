@@ -7,9 +7,15 @@ Two command namespaces are added for representing the [`Composer\Semver\Comparat
 Installation
 ------------
 
-Download or clone the source code and run the following command:
+Add the package as a requirement to your project:
 
-    $ composer global install
+    $ composer require isaac/composer-semver-cli
+
+This will install the `composer-semver` script to the `vendor/bin` folder of the project.
+
+Or as a global requirement:
+
+    $ composer global require isaac/composer-semver-cli
 
 This will install the `composer-semver` script to the `$HOME/.composer/vendor/bin` folder.
 
