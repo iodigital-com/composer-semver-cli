@@ -1,0 +1,20 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+$paths = [
+    __DIR__ . '/../vendor/autoload.php',
+    __DIR__ . '/../../vendor/autoload.php',
+    __DIR__ . '/../../../autoload.php',
+];
+
+foreach ($paths as $path) {
+    if (file_exists($path)) {
+        require $path;
+    }
+}
+
+$application = new ComposerSemverCli\Application(basename($argv[0]));
+$result = $application->run();
+exit($result);

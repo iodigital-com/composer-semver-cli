@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="composer-semver-cli">
+    <!-- include root folder of project -->
+    <file>.</file>
+    <!-- exclude paths -->
+    <exclude-pattern>./vendor</exclude-pattern>
+    <!-- include all rules in isaac ruleset -->
+    <rule ref="ISAAC">
+        <exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint"/>
+    </rule>
+    <config name="testVersion" value="7.1-"/> <!-- check for 7.1 and higher -->
+</ruleset>
