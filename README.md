@@ -40,46 +40,43 @@ Examples
 
 Check whether a version is greater than another version:
 
-    $ composer-semver -v comparator:gt '1.25.0' '1.24.0'
-    version '1.25.0' is greater than version '1.24.0' according to SemVer
+    $ composer-semver -v comparator:gt '1.25.0-alpha1' 'v1.24.0-p1'
+    version '1.25.0-alpha1' is greater than version 'v1.24.0-p1' according to Composer SemVer
 
 Sort versions:
 
-    $ composer-semver semver:sort '1.25.0' '1.24.0' '1.25.0-rc1' '1.25.0-p1'
-    1.24.0
-    1.25.0-rc1
+    $ composer-semver semver:sort '1.25.0' 'v1.25.0-p2' '1.25.0-rc3' 'v1.25-dev'
+    v1.25-dev
+    1.25.0-rc3
     1.25.0
-    1.25.0-p1
+    v1.25.0-p2
 
-Check is a version is satisfied by Composer SemVer constraint:
+Check if a version is satisfied by a Composer SemVer constraint:
 
-    $ composer-semver semver:satisfies -v '^1.25' '1.25.0-rc1'
-    SemVer constraint '^1.25' satisfies version '1.25.0-rc1'
+    $ composer-semver semver:satisfies -v '^1.25.0-p1' 'v1.25-p2'
+    Composer SemVer constraint '^1.25.0-p1' satisfies version 'v1.25-p2'
 
 Check which versions are satisfied by a Composer SemVer constraint:
 
-    $ composer-semver semver:satisfied-by '^1.25' '1.24.0' 1.25.0-rc1 '1.25.0' '1.25.0-p1' '1.26.0' '2.0.0'
-    1.25.0-rc1
-    1.25.0
-    1.25.0-p1
-    1.26.0
+    $ composer-semver semver:satisfied-by '^1.25.0-p1' '1.25.0' 'v1.25.0-p2' '1.25.0-rc3' 'v1.25-dev'
+    v1.25.0-p2
 
 Applications
 ------------
 
 This tool allows for Composer SemVer calculations where using the Composer tool itself would be impractical.
 
-For instance, to prepare for a PHP upgrade, it is nice to know upfront if the new version introduces any incompatibilities with the `require.php` property of the packages in the `vendor` folder. The following command generates a list of packages that are incompatible with PHP 7.4.0:
+For instance, to prepare for a PHP upgrade, it is nice to know upfront if the new version introduces any incompatibilities with the `require.php` property of the packages in the `vendor` folder. This can be done using the `check-platform-reqs` Composer command; however, this the Composer command is actually run in the context of the new PHP version. When this is not possible, the following command can be used to  generate a list of packages that are incompatible with a specific PHP version (in this case 7.4.0):
 
     $ for f in vendor/*/*/composer.json ; do if jq -e '.require.php' $f > /dev/null && ! composer-semver semver:satisfies "$(jq -r '.require.php' $f)" '7.4.0' ; then echo $f ; fi ; done
 
-Note that the Composer tool can also provide this information, but this is only for one package at a time. In order to get the next incompatible package, the incompatibility in the first package needs to be resolved.
+Note that this makes use of the [jq](https://stedolan.github.io/jq/) command.
 
 
-As another application, you might want to check how Composer sees the git tags of you application. For instance, you can sort them according to Composer SemVer:
+As another application, you might want to check how Composer sees the git tags of your application. For instance, you can sort them according to Composer SemVer:
 
-    git tag -l | xargs composer-semver semver:sort
+    $ git tag -l | xargs composer-semver semver:sort
 
 Or check which tags satisfy a Composer SemVer constraint:
 
-    git tag -l | xargs composer-semver semver:satisfied-by "^v1.2"
+    $ git tag -l | xargs composer-semver semver:satisfied-by "^v1.2"

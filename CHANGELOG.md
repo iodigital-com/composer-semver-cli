@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [v1.0.1] - 2020-11-06
+
+### Fixed
+
+- Compatibility with PHP 7.2 and 7.3 for development by downgrading object-calisthenics/phpcs-calisthenics-rules from 3.9.1 to 3.8.0
+- Improve examples and applications in the README
+
 ## [v1.0.0] - 2020-11-01
 
 ### Added

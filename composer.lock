@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b1cf51489ed3878dc78023f35d86fd5b",
+    "content-hash": "632fefa6431d227c37de2e9247f11ab7",
     "packages": [
         {
             "name": "composer/semver",
@@ -1052,34 +1052,33 @@
         },
         {
             "name": "object-calisthenics/phpcs-calisthenics-rules",
-            "version": "v3.9.1",
+            "version": "v3.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/object-calisthenics/phpcs-calisthenics-rules.git",
-                "reference": "6a4e66767138763839370273b47f1f9da6e0ee5a"
+                "reference": "c26ce1f98ea25e4791ab0f171b2737a4f5609de6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/object-calisthenics/phpcs-calisthenics-rules/zipball/6a4e66767138763839370273b47f1f9da6e0ee5a",
-                "reference": "6a4e66767138763839370273b47f1f9da6e0ee5a",
+                "url": "https://api.github.com/repos/object-calisthenics/phpcs-calisthenics-rules/zipball/c26ce1f98ea25e4791ab0f171b2737a4f5609de6",
+                "reference": "c26ce1f98ea25e4791ab0f171b2737a4f5609de6",
                 "shasum": ""
             },
             "require": {
                 "nette/utils": "^3.1",
-                "php": "^7.4|^8.0",
+                "php": "^7.2",
                 "slevomat/coding-standard": "^6.3",
                 "squizlabs/php_codesniffer": "^3.5"
             },
             "require-dev": {
-                "migrify/config-transformer": "^0.3.35",
-                "phpstan/phpdoc-parser": "^0.4.9",
-                "phpstan/phpstan": "^0.12.38",
-                "phpunit/phpunit": "^9.3",
-                "rector/rector": "^0.8.6",
-                "symplify/changelog-linker": "^8.2",
-                "symplify/coding-standard": "^8.2",
-                "symplify/easy-coding-standard-tester": "^8.2",
-                "symplify/phpstan-extensions": "^8.2",
+                "phpstan/phpdoc-parser": "0.4.8 as 0.4.4",
+                "phpstan/phpstan": "^0.12.32",
+                "phpunit/phpunit": "^8.5|^9.0",
+                "rector/rector": "^0.7.43",
+                "symplify/changelog-linker": "^8.1",
+                "symplify/coding-standard": "^8.1",
+                "symplify/easy-coding-standard-tester": "^8.1",
+                "symplify/phpstan-extensions": "^8.1",
                 "tracy/tracy": "^2.7"
             },
             "type": "phpcodesniffer-standard",
@@ -1094,7 +1093,7 @@
             ],
             "description": "PHP CodeSniffer Object Calisthenics rules/sniffs",
             "abandoned": "symplify/coding-standard",
-            "time": "2020-09-08T10:18:44+00:00"
+            "time": "2020-07-06T12:11:43+00:00"
         },
         {
             "name": "phpcompatibility/php-compatibility",
@@ -1376,8 +1375,6 @@
     "platform": {
         "php": "^7.2 || ^8.0"
     },
-    "platform-dev": {
-        "php": "~7.4.0"
-    },
+    "platform-dev": [],
     "plugin-api-version": "1.1.0"
 }
