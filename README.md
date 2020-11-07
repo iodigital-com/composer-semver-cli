@@ -34,6 +34,7 @@ The following commands are provided:
 * `semver:satisfied-by`: list which of the supplied versions are satisfied by a Composer SemVer constraint
 * `semver:sort`: sort versions according to Composer SemVer
 * `semver:rsort`: reverse sort versions according to Composer SemVer
+* `version-parser:parse-stability`: return stability of the supplied version
 
 Examples
 --------
@@ -60,6 +61,11 @@ Check which versions are satisfied by a Composer SemVer constraint:
 
     $ composer-semver semver:satisfied-by '^1.25.0-p1' '1.25.0' 'v1.25.0-p2' '1.25.0-rc3' 'v1.25-dev'
     v1.25.0-p2
+
+Return stability of a version:
+
+    $ composer-semver version-parser:parse-stability '1.25.0-rc3'
+    RC
 
 Applications
 ------------

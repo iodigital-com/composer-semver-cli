@@ -14,6 +14,7 @@ use ComposerSemverCli\Application\ConsoleCommand\Semver\RsortCommand as SemverRs
 use ComposerSemverCli\Application\ConsoleCommand\Semver\SatisfiedByCommand as SemverSatisfiedByCommandAlias;
 use ComposerSemverCli\Application\ConsoleCommand\Semver\SatisfiesCommand as SemverSatisfiesCommandAlias;
 use ComposerSemverCli\Application\ConsoleCommand\Semver\SortCommand as SemverSortCommandAlias;
+use ComposerSemverCli\Application\ConsoleCommand\VersionParser\ParseStabilityCommand as VersionParserParseStabilityCommand;
 use ComposerSemverCli\Application\VersionHelper;
 use Exception;
 use Symfony\Component\Console\Application as ConsoleApplication;
@@ -42,6 +43,7 @@ class Application
             new SemverSatisfiedByCommandAlias(),
             new SemverSortCommandAlias(),
             new SemverRsortCommandAlias(),
+            new VersionParserParseStabilityCommand(),
         ]);
         $this->consoleApplication = $consoleApplication;
     }
