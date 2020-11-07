@@ -2,7 +2,7 @@ Composer SemVer CLI
 ===================
 
 A CLI wrapper around the [composer/semver](https://github.com/composer/semver) package.
-Two command namespaces are added for representing the [`Composer\Semver\Comparator`](https://github.com/composer/semver#comparator) and [`Composer\Semver\Semver`](https://github.com/composer/semver#semver) classes.
+Command namespaces are added for representing most methods of the [`Composer\Semver\Comparator`](https://github.com/composer/semver#comparator), [`Composer\Semver\Semver`](https://github.com/composer/semver#semver) and `Composer\Semver\VersionParser` classes.
 
 Installation
 ------------
@@ -34,6 +34,7 @@ The following commands are provided:
 * `semver:satisfied-by`: list which of the supplied versions are satisfied by a Composer SemVer constraint
 * `semver:sort`: sort versions according to Composer SemVer
 * `semver:rsort`: reverse sort versions according to Composer SemVer
+* `version-parser:parse-stability`: return stability of the supplied version
 
 Examples
 --------
@@ -61,6 +62,11 @@ Check which versions are satisfied by a Composer SemVer constraint:
     $ composer-semver semver:satisfied-by '^1.25.0-p1' '1.25.0' 'v1.25.0-p2' '1.25.0-rc3' 'v1.25-dev'
     v1.25.0-p2
 
+Return stability of a version:
+
+    $ composer-semver version-parser:parse-stability '1.25.0-rc3'
+    RC
+
 Applications
 ------------
 
@@ -75,8 +81,12 @@ Note that this makes use of the [jq](https://stedolan.github.io/jq/) command.
 
 As another application, you might want to check how Composer sees the git tags of your application. For instance, you can sort them according to Composer SemVer:
 
-    $ git tag -l | xargs composer-semver semver:sort
+    $ composer-semver semver:sort $(git tag -l)
 
 Or check which tags satisfy a Composer SemVer constraint:
 
-    $ git tag -l | xargs composer-semver semver:satisfied-by "^v1.2"
+    $ composer-semver semver:satisfied-by "^1.2" $(git tag -l)
+
+Or you might want to know how many stable versions have been released:
+
+    $ for VERSION in $(git tag -l) ; do composer-semver version-parser:parse-stability ${VERSION} ; done | grep -c "stable"

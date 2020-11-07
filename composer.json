@@ -1,6 +1,7 @@
 {
     "name": "isaac/composer-semver-cli",
     "description": "CLI wrapper for the composer/semver package",
+    "keywords": ["composer", "semver", "cli", "console"],
     "type": "project",
     "license": "MIT",
     "authors": [
@@ -12,10 +13,10 @@
     "require": {
         "php": "^7.2 || ^8.0",
         "composer/semver": "^3.2",
+        "isaac/php-code-sniffer-standard": "^19.0",
         "symfony/console": "^5.1"
     },
     "require-dev": {
-        "isaac/php-code-sniffer-standard": "^19.0",
         "phpstan/phpstan": "^0.12.53",
         "object-calisthenics/phpcs-calisthenics-rules": "3.8.0"
     },
@@ -26,5 +27,9 @@
     },
     "bin": [
         "bin/composer-semver"
-    ]
+    ],
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
 }
