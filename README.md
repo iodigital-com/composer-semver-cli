@@ -2,7 +2,7 @@ Composer SemVer CLI
 ===================
 
 A CLI wrapper around the [composer/semver](https://github.com/composer/semver) package.
-Two command namespaces are added for representing the [`Composer\Semver\Comparator`](https://github.com/composer/semver#comparator) and [`Composer\Semver\Semver`](https://github.com/composer/semver#semver) classes.
+Command namespaces are added for representing most methods of the [`Composer\Semver\Comparator`](https://github.com/composer/semver#comparator), [`Composer\Semver\Semver`](https://github.com/composer/semver#semver) and `Composer\Semver\VersionParser` classes.
 
 Installation
 ------------
