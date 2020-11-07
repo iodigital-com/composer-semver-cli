@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace ComposerSemverCli;
 
-use ComposerSemverCli\Application\ConsoleCommand\Comparator\EqualToCommand as ComparatorEqualToCommandAlias;
-use ComposerSemverCli\Application\ConsoleCommand\Comparator\GreaterThanCommand as ComparatorGreaterThanCommandAlias;
-use ComposerSemverCli\Application\ConsoleCommand\Comparator\GreaterThanOrEqualToCommand as ComparatorGreaterThanOrEqualToCommandAlias;
-use ComposerSemverCli\Application\ConsoleCommand\Comparator\LessThanCommand as ComparatorLessThanCommandAlias;
-use ComposerSemverCli\Application\ConsoleCommand\Comparator\LessThanOrEqualToCommand as ComparatorLessThanOrEqualToCommandAlias;
-use ComposerSemverCli\Application\ConsoleCommand\Comparator\NotEqualToCommand as ComparatorNotEqualToCommandAlias;
-use ComposerSemverCli\Application\ConsoleCommand\Semver\RsortCommand as SemverRsortCommandAlias;
-use ComposerSemverCli\Application\ConsoleCommand\Semver\SatisfiedByCommand as SemverSatisfiedByCommandAlias;
-use ComposerSemverCli\Application\ConsoleCommand\Semver\SatisfiesCommand as SemverSatisfiesCommandAlias;
-use ComposerSemverCli\Application\ConsoleCommand\Semver\SortCommand as SemverSortCommandAlias;
+use ComposerSemverCli\Application\ConsoleCommand\Comparator\EqualToCommand as ComparatorEqualToCommand;
+use ComposerSemverCli\Application\ConsoleCommand\Comparator\GreaterThanCommand as ComparatorGreaterThanCommand;
+use ComposerSemverCli\Application\ConsoleCommand\Comparator\GreaterThanOrEqualToCommand as ComparatorGreaterThanOrEqualToCommand;
+use ComposerSemverCli\Application\ConsoleCommand\Comparator\LessThanCommand as ComparatorLessThanCommand;
+use ComposerSemverCli\Application\ConsoleCommand\Comparator\LessThanOrEqualToCommand as ComparatorLessThanOrEqualToCommand;
+use ComposerSemverCli\Application\ConsoleCommand\Comparator\NotEqualToCommand as ComparatorNotEqualToCommand;
+use ComposerSemverCli\Application\ConsoleCommand\Semver\RsortCommand as SemverRsortCommand;
+use ComposerSemverCli\Application\ConsoleCommand\Semver\SatisfiedByCommand as SemverSatisfiedByCommand;
+use ComposerSemverCli\Application\ConsoleCommand\Semver\SatisfiesCommand as SemverSatisfiesCommand;
+use ComposerSemverCli\Application\ConsoleCommand\Semver\SortCommand as SemverSortCommand;
 use ComposerSemverCli\Application\ConsoleCommand\VersionParser\ParseStabilityCommand as VersionParserParseStabilityCommand;
 use ComposerSemverCli\Application\VersionHelper;
 use Exception;
@@ -33,16 +33,16 @@ class Application
         $versionHelper = new VersionHelper();
         $consoleApplication = new ConsoleApplication($applicationName, $versionHelper->getVersion());
         $consoleApplication->addCommands([
-            new ComparatorGreaterThanCommandAlias(),
-            new ComparatorGreaterThanOrEqualToCommandAlias(),
-            new ComparatorLessThanCommandAlias(),
-            new ComparatorLessThanOrEqualToCommandAlias(),
-            new ComparatorEqualToCommandAlias(),
-            new ComparatorNotEqualToCommandAlias(),
-            new SemverSatisfiesCommandAlias(),
-            new SemverSatisfiedByCommandAlias(),
-            new SemverSortCommandAlias(),
-            new SemverRsortCommandAlias(),
+            new ComparatorGreaterThanCommand(),
+            new ComparatorGreaterThanOrEqualToCommand(),
+            new ComparatorLessThanCommand(),
+            new ComparatorLessThanOrEqualToCommand(),
+            new ComparatorEqualToCommand(),
+            new ComparatorNotEqualToCommand(),
+            new SemverSatisfiesCommand(),
+            new SemverSatisfiedByCommand(),
+            new SemverSortCommand(),
+            new SemverRsortCommand(),
             new VersionParserParseStabilityCommand(),
         ]);
         $this->consoleApplication = $consoleApplication;
