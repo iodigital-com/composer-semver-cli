@@ -28,6 +28,7 @@
         "bin/composer-semver"
     ],
     "config": {
+        "optimize-autoloader": true,
         "sort-packages": true
     }
 }
