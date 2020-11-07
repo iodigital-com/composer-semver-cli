@@ -81,8 +81,12 @@ Note that this makes use of the [jq](https://stedolan.github.io/jq/) command.
 
 As another application, you might want to check how Composer sees the git tags of your application. For instance, you can sort them according to Composer SemVer:
 
-    $ git tag -l | xargs composer-semver semver:sort
+    $ composer-semver semver:sort $(git tag -l)
 
 Or check which tags satisfy a Composer SemVer constraint:
 
-    $ git tag -l | xargs composer-semver semver:satisfied-by "^v1.2"
+    $ composer-semver semver:satisfied-by "^1.2" $(git tag -l)
+
+Or you might want to know how many stable versions have been released:
+
+    $ for VERSION in $(git tag -l) ; do composer-semver version-parser:parse-stability ${VERSION} ; done | grep -c "stable"
