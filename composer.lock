@@ -8,23 +8,23 @@
     "packages": [
         {
             "name": "composer/semver",
-            "version": "3.2.2",
+            "version": "3.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/semver.git",
-                "reference": "4089fddb67bcf6bf860d91b979e95be303835002"
+                "reference": "a02fdf930a3c1c3ed3a49b5f63859c0c20e10464"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/semver/zipball/4089fddb67bcf6bf860d91b979e95be303835002",
-                "reference": "4089fddb67bcf6bf860d91b979e95be303835002",
+                "url": "https://api.github.com/repos/composer/semver/zipball/a02fdf930a3c1c3ed3a49b5f63859c0c20e10464",
+                "reference": "a02fdf930a3c1c3ed3a49b5f63859c0c20e10464",
                 "shasum": ""
             },
             "require": {
                 "php": "^5.3.2 || ^7.0 || ^8.0"
             },
             "require-dev": {
-                "phpstan/phpstan": "^0.12.19",
+                "phpstan/phpstan": "^0.12.54",
                 "symfony/phpunit-bridge": "^4.2 || ^5"
             },
             "type": "library",
@@ -80,7 +80,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-10-14T08:51:15+00:00"
+            "time": "2020-11-13T08:59:24+00:00"
         },
         {
             "name": "dealerdirect/phpcodesniffer-composer-installer",
@@ -153,14 +153,14 @@
             "version": "v19.0.0",
             "source": {
                 "type": "git",
-                "url": "ssh://git@gitlab.isaac.local/php-module/isaac-php-code-sniffer-standard.git",
+                "url": "https://github.com/isaaceindhoven/php-code-sniffer-standard.git",
                 "reference": "ae6410664b993aea7f1e75d8460a6c03c1b82eac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://composer-packages.hq.isaac.nl/repository/dist/isaac/php-code-sniffer-standard/isaac-php-code-sniffer-standard-v19.0.0-ad3955.zip",
+                "url": "https://api.github.com/repos/isaaceindhoven/php-code-sniffer-standard/zipball/ae6410664b993aea7f1e75d8460a6c03c1b82eac",
                 "reference": "ae6410664b993aea7f1e75d8460a6c03c1b82eac",
-                "shasum": "054266c00bc0034fdc39453690117584a017c345"
+                "shasum": ""
             },
             "require": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
@@ -329,7 +329,7 @@
                 "MIT"
             ],
             "description": "PHP CodeSniffer Object Calisthenics rules/sniffs",
-            "abandoned": "symplify/coding-standard",
+            "abandoned": "symplify/phpstan-rules",
             "time": "2020-07-06T12:11:43+00:00"
         },
         {
