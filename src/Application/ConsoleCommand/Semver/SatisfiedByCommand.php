@@ -64,7 +64,7 @@ class SatisfiedByCommand extends Command
      */
     protected function getQuotedValues(array $values): array
     {
-        return array_map(static function ($value) {
+        return array_map(static function (string $value): string {
             return sprintf('\'%s\'', $value);
         }, $values);
     }
