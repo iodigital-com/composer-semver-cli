@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Updated `symfony/console` dependency from v5.1.8 to v5.2.6
 - Updated `isaac/php-code-sniffer-standard` dependency from v19.0.0 to v21.0.0
 - Updated `phpstan/phpstan` dependency from 0.12.53 to 0.12.85
+- Switched to Composer 2 (Composer 1 still works)
 
 ## [v1.1.0] - 2020-11-07
 
