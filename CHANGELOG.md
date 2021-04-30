@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 
 - Updated `composer/semver` dependency from 3.2.2 to 3.2.4
+- Updated `symfony/console` dependency from v5.1.8 to v5.2.6
 
 ## [v1.1.0] - 2020-11-07
 
