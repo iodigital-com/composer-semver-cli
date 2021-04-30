@@ -18,7 +18,9 @@
     "require-dev": {
         "isaac/php-code-sniffer-standard": "^21.0",
         "object-calisthenics/phpcs-calisthenics-rules": "3.8.0",
-        "phpstan/phpstan": "^0.12.53"
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan": "^0.12.53",
+        "phpstan/phpstan-strict-rules": "^0.12.9"
     },
     "autoload": {
         "psr-4": {

@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- Added `phpstan/phpstan-strict-rules` and `phpstan/extension-installer` packages
+
 ### Changed
 
 - Updated `composer/semver` dependency from 3.2.2 to 3.2.4
