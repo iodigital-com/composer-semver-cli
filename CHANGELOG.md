@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [v1.2.0] - 2021-04-30
+
 ### Added
 
 - Added `phpstan/phpstan-strict-rules` and `phpstan/extension-installer` packages
