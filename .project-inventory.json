@@ -1,5 +1,5 @@
 {
-  "classification": "library",
+  "classification": "cli-application",
   "jiraKey": "ICOMP",
   "jiraComponent": "",
   "jiraSummaryPrefix": "Composer Semver CLI"
