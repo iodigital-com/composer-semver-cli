@@ -9,13 +9,13 @@ Installation
 
 Add the package as a requirement to your project:
 
-    $ composer require isaac/composer-semver-cli
+    $ composer require iodigital-com/composer-semver-cli
 
 This will install the `composer-semver` script to the `vendor/bin` folder of the project.
 
 Or as a global requirement:
 
-    $ composer global require isaac/composer-semver-cli
+    $ composer global require iodigital-com/composer-semver-cli
 
 This will install the `composer-semver` script to the `$HOME/.composer/vendor/bin` folder.
 

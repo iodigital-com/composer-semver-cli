@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- Rename package from `isaac/composer-semver-cli` to `iodigital-com/composer-semver-cli`
+
 ## [v1.3.0] - 2024-07-01
 
 ### Changed

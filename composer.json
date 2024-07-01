@@ -1,5 +1,8 @@
 {
-    "name": "isaac/composer-semver-cli",
+    "name": "iodigital-com/composer-semver-cli",
+    "replace": {
+        "isaac/composer-semver-cli": "*"
+    },
     "description": "CLI wrapper for the composer/semver package",
     "keywords": ["composer", "semver", "cli", "console"],
     "type": "project",
@@ -7,7 +10,7 @@
     "authors": [
         {
             "name": "Aad Mathijssen",
-            "email": "aad.mathijssen@isaac.nl"
+            "email": "aad.mathijssen@iodigital.com"
         }
     ],
     "require": {
