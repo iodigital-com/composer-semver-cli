@@ -4,9 +4,9 @@
     <file>.</file>
     <!-- exclude paths -->
     <exclude-pattern>./vendor</exclude-pattern>
-    <!-- include all rules in isaac ruleset -->
-    <rule ref="ISAAC">
+    <!-- include all rules in iO ruleset -->
+    <rule ref="IO">
         <exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint"/>
     </rule>
-    <config name="testVersion" value="7.1-"/> <!-- check for 7.1 and higher -->
+    <config name="testVersion" value="8.1-"/>
 </ruleset>
