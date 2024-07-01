@@ -72,9 +72,9 @@ Applications
 
 This tool allows for Composer SemVer calculations where using the Composer tool itself would be impractical.
 
-For instance, to prepare for a PHP upgrade, it is nice to know upfront if the new version introduces any incompatibilities with the `require.php` property of the packages in the `vendor` folder. This can be done using the `check-platform-reqs` Composer command; however, this the Composer command is actually run in the context of the new PHP version. When this is not possible, the following command can be used to  generate a list of packages that are incompatible with a specific PHP version (in this case 7.4.0):
+For instance, to prepare for a PHP upgrade, it is nice to know upfront if the new version introduces any incompatibilities with the `require.php` property of the packages in the `vendor` folder. This can be done using the `check-platform-reqs` Composer command; however, this the Composer command is actually run in the context of the new PHP version. When this is not possible, the following command can be used to  generate a list of packages that are incompatible with a specific PHP version (in this case 8.3.0):
 
-    $ for f in vendor/*/*/composer.json ; do if jq -e '.require.php' $f > /dev/null && ! composer-semver semver:satisfies "$(jq -r '.require.php' $f)" '7.4.0' ; then echo $f ; fi ; done
+    $ for f in vendor/*/*/composer.json ; do if jq -e '.require.php' $f > /dev/null && ! composer-semver semver:satisfies "$(jq -r '.require.php' $f)" '8.3.0' ; then echo $f ; fi ; done
 
 Note that this makes use of the [jq](https://stedolan.github.io/jq/) command.
 

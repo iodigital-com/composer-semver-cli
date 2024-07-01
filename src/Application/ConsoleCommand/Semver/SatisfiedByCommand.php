@@ -59,8 +59,8 @@ class SatisfiedByCommand extends Command
     }
 
     /**
-     * @param string[] $values
-     * @return string[]
+     * @param array<string> $values
+     * @return array<string>
      */
     protected function getQuotedValues(array $values): array
     {

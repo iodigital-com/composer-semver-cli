@@ -6,6 +6,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [v1.3.0] - 2024-07-01
+
+### Changed
+
+- Updated `composer/semver` dependency (3.2.4 => 3.4.0)
+- Updated `symfony/console` dependency (v5.2.6 => v6.4.9)
+- Replaced `isaac/php-code-sniffer-standard` (v21.0.0) by `iodigital-com/php-code-sniffer-standard` (v29.2.0)
+- Updated `phpstan/phpstan` dependency (0.12.85 => 1.11.5)
+- Updated Copyright year
+- Change Copyright name from ISAAC to iO
+
+### Removed
+
+- Dropped support for PHP 7.x and 8.0
+
 ## [v1.2.0] - 2021-04-30
 
 ### Added
