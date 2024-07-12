@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Updated `composer/semver` dependency (3.4.0 => 3.4.1)
 - Updated `phpstan/phpstan` dependency (1.11.5 => 1.11.7)
+- Update `composer.json` SemVer constraints to match the versions in `composer.lock`
 
 ## [v1.4.0] - 2024-07-01
 
