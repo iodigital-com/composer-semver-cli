@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- Updated `composer/semver` dependency (3.4.0 => 3.4.1)
+
 ## [v1.4.0] - 2024-07-01
 
 ### Changed
