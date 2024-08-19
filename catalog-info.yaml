@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: composer-semver-cli
+  title: Composer SemVer CLI
+  description: A CLI wrapper around the [composer/semver](https://github.com/composer/semver) package.
+  namespace: io
+  tags:
+    - php
+  annotations:
+    jira/project-key: IDEVT
+    jira/label: composer-semver-cli
+spec:
+  type: tool
+  lifecycle: development
+  owner: default/team_chapter_php_eindhoven

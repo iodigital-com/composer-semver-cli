@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- Add `catalog-info.yaml`
+
 ## [v1.4.2] - 2024-07-12
 
 ### Changed
