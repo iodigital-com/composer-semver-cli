@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Updated `composer/semver` dependency (3.4.2 => 3.4.3)
 - Updated `phpstan/phpstan` dependency (1.11.7 => 1.12.4)
+- Updated `phpstan/extension-installer` dependency (1.4.1 => 1.4.3)
 - Add `catalog-info.yaml`
 
 ## [v1.4.2] - 2024-07-12
