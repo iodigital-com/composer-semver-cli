@@ -30,3 +30,4 @@ jobs:
           dependency-versions: "${{ matrix.composer-dependency-versions }}"
       - run: "vendor/bin/phpcs"
       - run: "vendor/bin/phpstan"
+      - run: "vendor/bin/phpunit"

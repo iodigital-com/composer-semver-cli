@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add PHP 8.4 support
 - Add GitHub workflow for running PHP_CodeSniffer and PHPStan
 - Add `catalog-info.yaml`
+- Add tests
 
 ### Changed
 

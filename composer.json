@@ -22,11 +22,18 @@
         "iodigital-com/php-code-sniffer-standard": "^29.3",
         "phpstan/extension-installer": "^1.4",
         "phpstan/phpstan": "^2.1",
-        "phpstan/phpstan-strict-rules": "^2.0"
+        "phpstan/phpstan-strict-rules": "^2.0",
+        "phpunit/phpunit": "^10.5"
     },
     "autoload": {
         "psr-4": {
             "ComposerSemverCli\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ComposerSemverCli\\": "tests",
+            "Composer\\Semver\\": "vendor/composer/semver/tests"
         }
     },
     "bin": [
@@ -38,6 +45,9 @@
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "phpstan/extension-installer": true
+        },
+        "preferred-install": {
+            "composer/semver": "source"
         }
     }
 }
