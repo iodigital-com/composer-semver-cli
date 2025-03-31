@@ -21,8 +21,8 @@
     "require-dev": {
         "iodigital-com/php-code-sniffer-standard": "^29.3",
         "phpstan/extension-installer": "^1.4",
-        "phpstan/phpstan": "^1.12",
-        "phpstan/phpstan-strict-rules": "^1.6"
+        "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan-strict-rules": "^2.0"
     },
     "autoload": {
         "psr-4": {
