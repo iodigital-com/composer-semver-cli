@@ -11,6 +11,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use UnexpectedValueException;
 
+use function array_filter;
 use function is_array;
 
 class SortCommand extends Command
@@ -25,8 +26,8 @@ class SortCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $versions = $input->getArgument('version');
-        if (!is_array($versions)) {
-            throw new UnexpectedValueException('the value of \'version\' should be an array');
+        if (!is_array($versions) || array_filter($versions, 'is_string') !== $versions) {
+            throw new UnexpectedValueException('the value of \'version\' should be an array of strings');
         }
         $sortedVersions = Semver::sort($versions);
         $output->writeln($sortedVersions);

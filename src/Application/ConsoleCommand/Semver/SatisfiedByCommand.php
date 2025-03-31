@@ -11,6 +11,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use UnexpectedValueException;
 
+use function array_filter;
 use function array_map;
 use function count;
 use function implode;
@@ -38,7 +39,7 @@ class SatisfiedByCommand extends Command
             throw new UnexpectedValueException('the value of \'constraint\' should be a string');
         }
         $versions = $input->getArgument('version');
-        if (!is_array($versions)) {
+        if (!is_array($versions) || array_filter($versions, 'is_string') !== $versions) {
             throw new UnexpectedValueException('the value of \'version\' should be an array');
         }
         $satisfiedVersions = Semver::satisfiedBy($versions, $constraint);

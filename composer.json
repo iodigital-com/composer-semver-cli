@@ -19,10 +19,10 @@
         "symfony/console": "^6.4"
     },
     "require-dev": {
-        "iodigital-com/php-code-sniffer-standard": "^29.2",
+        "iodigital-com/php-code-sniffer-standard": "^29.3",
         "phpstan/extension-installer": "^1.4",
-        "phpstan/phpstan": "^1.11",
-        "phpstan/phpstan-strict-rules": "^1.6"
+        "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan-strict-rules": "^2.0"
     },
     "autoload": {
         "psr-4": {
