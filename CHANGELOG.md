@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Updated `phpstan/phpstan` dependency (1.11.7 => 1.12.4)
 - Updated `phpstan/extension-installer` dependency (1.4.1 => 1.4.3)
 - Updated `phpstan/phpstan-strict-rules` dependency (1.6.0 => 1.6.1)
+- Updated `iodigital-com/php-code-sniffer-standard` dependency (v29.2.0 => v29.3.0)
 - Add GitHub workflow for running PHP_CodeSniffer and PHPStan
 - Add `catalog-info.yaml`
 

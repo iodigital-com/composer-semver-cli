@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b0967556a971a2211cb805f074468c5e",
+    "content-hash": "3ee3e514c6da0a0d7f22a6550dbc597b",
     "packages": [
         {
             "name": "composer/semver",
@@ -870,21 +870,21 @@
         },
         {
             "name": "iodigital-com/php-code-sniffer-standard",
-            "version": "v29.2.0",
+            "version": "v29.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/iodigital-com/php-code-sniffer-standard.git",
-                "reference": "954a61f0c324d7d2fa74647cb388ea9a0195e0ac"
+                "reference": "0553f2d27ee334707d005412133bd30de95d9178"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/iodigital-com/php-code-sniffer-standard/zipball/954a61f0c324d7d2fa74647cb388ea9a0195e0ac",
-                "reference": "954a61f0c324d7d2fa74647cb388ea9a0195e0ac",
+                "url": "https://api.github.com/repos/iodigital-com/php-code-sniffer-standard/zipball/0553f2d27ee334707d005412133bd30de95d9178",
+                "reference": "0553f2d27ee334707d005412133bd30de95d9178",
                 "shasum": ""
             },
             "require": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7 || ^1.0",
-                "php": "~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0",
+                "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0",
                 "phpcompatibility/php-compatibility": "^9.3",
                 "slevomat/coding-standard": "^8.15",
                 "squizlabs/php_codesniffer": "^3.6.0"
@@ -896,10 +896,12 @@
                 "isaac/php-code-sniffer-standard": "*"
             },
             "require-dev": {
-                "phpstan/extension-installer": "^1.1",
-                "phpstan/phpstan": "^1.0",
-                "phpstan/phpstan-strict-rules": "^1.0",
-                "phpunit/phpunit": "^9.5"
+                "captainhook/captainhook-phar": "^5.25.2",
+                "captainhook/hook-installer": "^1.0",
+                "phpstan/extension-installer": "^1.4",
+                "phpstan/phpstan": "^2.1",
+                "phpstan/phpstan-strict-rules": "^2.0",
+                "phpunit/phpunit": "^10.5"
             },
             "type": "phpcodesniffer-standard",
             "autoload": {
@@ -914,9 +916,9 @@
             "description": "iO PHP_CodeSniffer Standard",
             "support": {
                 "issues": "https://github.com/iodigital-com/php-code-sniffer-standard/issues",
-                "source": "https://github.com/iodigital-com/php-code-sniffer-standard/tree/v29.2.0"
+                "source": "https://github.com/iodigital-com/php-code-sniffer-standard/tree/v29.3.0"
             },
-            "time": "2024-03-22T10:05:23+00:00"
+            "time": "2025-03-31T09:46:58+00:00"
         },
         {
             "name": "phpcompatibility/php-compatibility",
@@ -1330,12 +1332,12 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.1"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
