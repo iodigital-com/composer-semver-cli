@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 
 - Updated `composer/semver` dependency (3.4.2 => 3.4.3)
-- Updated `symfony/console` dependency (v6.4.9 => v6.4.12)
+- Updated `symfony/console` dependency (v6.4.9 => v6.4.20)
 - Updated `phpstan/phpstan` dependency (1.11.7 => 2.1.11)
 - Updated `phpstan/extension-installer` dependency (1.4.1 => 1.4.3)
 - Updated `phpstan/phpstan-strict-rules` dependency (1.6.0 => 2.0.4)
